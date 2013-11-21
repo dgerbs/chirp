@@ -27,4 +27,12 @@ feature "Pages" do
       it { should have_selector('h1', text: 'About') }
     end
   end
+
+  describe "Contact page" do
+    before { visit '/pages/contact' }
+
+    context "should have the h1 'contact'" do
+      it { should have_selector('h1', text: 'Contact') }
+    end
+  end
 end
