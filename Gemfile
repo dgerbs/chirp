@@ -12,3 +12,17 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'shoulda'
+  gem 'valid_attribute'
+  gem 'factory_girl'
+  gem 'pry-rails'
+end
+
+group :production do
+  gem 'pg'
+end
