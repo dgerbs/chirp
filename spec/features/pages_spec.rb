@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-feature "Pages" do
-  
+describe "Pages" do
+
   subject { page }
 
   describe "Home page" do
