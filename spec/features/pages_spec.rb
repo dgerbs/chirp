@@ -31,8 +31,16 @@ describe "Pages" do
   describe "Contact page" do
     before { visit '/pages/contact' }
 
-    context "should have the h1 'contact'" do
+    context "should have the h1 'Contact'" do
       it { should have_selector('h1', text: 'Contact') }
+    end
+  end
+
+   describe "News page" do
+    before { visit '/pages/news' }
+
+    context "should have the h1 'News'" do
+      it { should have_selector('h1', text: 'News') }
     end
   end
 end

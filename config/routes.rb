@@ -2,6 +2,7 @@ Chirp::Application.routes.draw do
   get "pages/help"
   get "pages/about"
   get "pages/contact"
+  get "pages/news"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
