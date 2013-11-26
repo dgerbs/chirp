@@ -5,7 +5,7 @@ describe "Pages" do
   subject { page }
 
   describe "Home page" do
-    before { visit '/' }
+    before { visit root_path }
 
     context "should have the h1 'Chirp'" do
       it { should have_selector('h1', text: 'Chirp') }
@@ -13,7 +13,7 @@ describe "Pages" do
   end
 
   describe "Help page" do
-    before { visit '/pages/help' }
+    before { visit help_path }
     
     context "should have the h1 'Help'" do
       it { should have_selector('h1', text: 'Help') }
@@ -21,7 +21,7 @@ describe "Pages" do
   end
 
   describe "About page" do
-    before { visit '/pages/about' }
+    before { visit about_path }
 
     context "should have the h1 'About'" do
       it { should have_selector('h1', text: 'About') }
@@ -29,7 +29,7 @@ describe "Pages" do
   end
 
   describe "Contact page" do
-    before { visit '/pages/contact' }
+    before { visit contact_path }
 
     context "should have the h1 'Contact'" do
       it { should have_selector('h1', text: 'Contact') }
@@ -37,7 +37,7 @@ describe "Pages" do
   end
 
    describe "News page" do
-    before { visit '/pages/news' }
+    before { visit news_path }
 
     context "should have the h1 'News'" do
       it { should have_selector('h1', text: 'News') }

@@ -60,13 +60,18 @@ p {
 
 /* logo */
 
-.navbar-brand {
-  margin-right: 10px;
+#logo {
+  float: left;
+  padding-top: 10px;
   font-size: 1.7em;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
   line-height: 1;
+  &:hover {
+    color: #3276b1;
+    text-decoration: none;
+  }
 }
 
 /* footer */
