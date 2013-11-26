@@ -43,4 +43,5 @@ describe "Pages" do
       it { should have_selector('h1', text: 'News') }
     end
   end
+  
 end

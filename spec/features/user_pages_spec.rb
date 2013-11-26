@@ -11,4 +11,5 @@ describe "User pages" do
       it { should have_selector('h1', text: 'Sign up') }
     end
   end
+  
 end
