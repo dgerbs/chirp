@@ -5,25 +5,13 @@
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <%= render 'layouts/shim' %>
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <%= link_to "Chirp", '#', class: "navbar-brand" %>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Home",    '#' %></li>
-          <li><%= link_to "Help",    '#' %></li>
-          <li><%= link_to "Sign in", '#' %></li>
-        </ul>
-      </div>
-    </nav>
+    <%= render 'layouts/header' %>
     <div class="container">
       <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
