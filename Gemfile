@@ -8,7 +8,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
