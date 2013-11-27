@@ -68,4 +68,10 @@ describe User do
     it { should_not be_valid }
   end
 
+  describe "should respond to password digest attribute" do
+    it { should respond_to(:name) }
+    it { should respond_to(:email) }
+    it { should respond_to(:password_digest) }
+  end
+
 end
