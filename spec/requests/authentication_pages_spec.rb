@@ -6,6 +6,18 @@ describe "Authentication pages" do
 
   describe "authorization" do
 
+    describe "as wrong user" do
+      let(:user) { FactoryGirl.create(:user) }
+      let(:wrong_user) { FactoryGirl.create(:user, email: "wrong@blah.com") }
+      before { sign_in user }
+
+
+      describe "submitting a PUT request to the User#update action" do
+        before { put user_path(wrong_user) }
+        specify { response.should redirect_to(signin_path) }
+      end
+    end
+
     describe "for non-signed-in users" do
       let(:user) { FactoryGirl.create(:user) }
 
