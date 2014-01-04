@@ -9,6 +9,8 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'faker', '1.0.1'
+gem 'will_paginate', '~> 3.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
