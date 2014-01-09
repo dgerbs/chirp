@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
                                    class_name: "Relationship",
                                    dependent: :destroy
   has_many :followers, through: :reverse_relationships, source: :follower
-
   has_many :followed_users, through: :relationships, source: :followed
 
   before_save { |user| user.email = email.downcase }
@@ -32,11 +31,11 @@ class User < ActiveRecord::Base
   end
 
   def follow!(other_user)
-    self.relationships.create!(followed_id: other_user.id)
+    relationships.create!(followed_id: other_user.id)
   end
 
   def unfollow!(other_user)
-    self.relationships.find_by_followed_id(other_user.id).destroy
+    relationships.find_by_followed_id(other_user.id).destroy
   end
 
   private
