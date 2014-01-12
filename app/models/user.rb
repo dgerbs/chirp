@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
   validates_length_of     :password, minimum: 6
 
   def feed
-    Micropost.where("user_id = ?", id)
+    Micropost.from_users_followed_by(self)
   end
 
   def following?(other_user)
